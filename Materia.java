@@ -1,6 +1,5 @@
 package freeStyle;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Materia {
@@ -56,9 +55,6 @@ public class Materia {
 	
 	public static List<Materia> listaMaterias(List<Materia> tecnicatura) {
 		
-
-		//final List<Materia> tecnicatura = new ArrayList<Materia>();
-		
 		String[] materias = { "Programacion I", "Laboratorio I", "SPD", "Ingles I", "Matematica", "Programacion II",
 				"Laboratorio II", "Ingles II", "Estadistica", "Arquitectura y SO",
 				"Metodologia de la investigacion", "Organizacion Contable de la Empresa",
@@ -74,50 +70,4 @@ public class Materia {
 		return tecnicatura;
 	}
 
-	public static List<Materia> resetMaterias(List<Materia> mate) {
-
-		for (int i = 0; i < 20; i++) {
-			mate.get(i).setAprobado(false);
-		}
-		return mate;
-	}
-/*
-	public void totalAprobado(Materia[] mate) {
-
-		int aprobado = 0;
-		float promedio = 0;
-
-		for (int i = 0; i < mate.length; i++) {
-			if (mate[i].isAprobado()) {
-				aprobado++;
-			}
-		}
-
-		promedio = aprobado / mate.length;
-
-		System.out.println("Materias aprobadas: " + aprobado + "Carrera completa: " + promedio);
-	}
-	
-	public static int totalAprobado(String estado, int totalAprobado) {	
-		
-		
-		if(estado.equals("Aprobada")) {
-			totalAprobado++;
-		} else {
-			totalAprobado--;
-		}
-		System.out.println(totalAprobado + " " + estado);
-		return totalAprobado;
-	}*/
-	public static int totalAprobado(boolean aprobado , int totalAprobado) {	
-		
-		
-		if(aprobado) {
-			totalAprobado++;
-		} else {
-			totalAprobado--;
-		}
-		System.out.println(totalAprobado + " " + aprobado); //borrar cuando funcione
-		return totalAprobado;
-	}
 }
