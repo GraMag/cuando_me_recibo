@@ -31,11 +31,20 @@ public class Acciones {
 	}
 	
 	public static void mostrarCorrelativas(List<Materia> tecnicatura2, int index) {
-		Tecnicatura.mensaje(tecnicatura2.get(index).getMateria());  
+		if(index != 20) {
+			Tecnicatura.mensaje(tecnicatura2.get(index).getMateria());  
+		} else {
+			Tecnicatura.mensaje();
+		}
+		
 	}
 	
 	public static void mostrarCorrelativas(List<Materia> tecnicatura2, int index, int index2) {
-			Tecnicatura.mensaje(tecnicatura2.get(index).getMateria(), tecnicatura2.get(index2).getMateria());  
+		Tecnicatura.mensaje(tecnicatura2.get(index).getMateria(), tecnicatura2.get(index2).getMateria());  
+	}
+	
+	public static void mostrarCorrelativas(List<Materia> tecnicatura2, int index, int index2, int index3) {
+		Tecnicatura.mensaje(tecnicatura2.get(index).getMateria(), tecnicatura2.get(index2).getMateria(), tecnicatura2.get(index3).getMateria());  
 	}
 	
 	public static List<Materia> resetMaterias(List<Materia> tecnicatura) {

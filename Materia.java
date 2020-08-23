@@ -1,6 +1,14 @@
 package freeStyle;
 
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
 
 public class Materia {
 
@@ -60,10 +68,10 @@ public class Materia {
 				"Metodologia de la investigacion", "Organizacion Contable de la Empresa",
 				"Elementos de investigacion Operativa", "Organizacion Empresarial", "Programacion III",
 				"Laboratorio III", "Legislacion", "Metodologia de Sistemas", "Diseño de BBDD",
-				"Laboratorio IV" };
+				"Laboratorio IV", "!correlativas" };
 		
 		
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < materias.length; i++) {
 			tecnicatura.add(new Materia(i, materias[i], false));
 			System.out.println(tecnicatura.get(i).getId() + " " + tecnicatura.get(i).getMateria() + " " + tecnicatura.get(i).isAprobado());
 		}
